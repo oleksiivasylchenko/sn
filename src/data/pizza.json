@@ -7,15 +7,15 @@
       "sizes": [
         {
           "id": 1,
-          "price": "19.90"
+          "price": "19.90 pln."
         },
         {
           "id": 2,
-          "price": "25.90"
+          "price": "25.90 pln."
         },
         {
           "id": 3,
-          "price": "30.90"
+          "price": "30.90 pln."
         }
       ]
     },
@@ -26,15 +26,15 @@
       "sizes": [
         {
           "id": 1,
-          "price": "19.90"
+          "price": "19.90 pln."
         },
         {
           "id": 2,
-          "price": "25.90"
+          "price": "25.90 pln."
         },
         {
           "id": 3,
-          "price": "30.90"
+          "price": "30.90 pln."
         }
       ]
     },
@@ -45,15 +45,15 @@
       "sizes": [
         {
           "id": 1,
-          "price": "19.90"
+          "price": "19.90 pln."
         },
         {
           "id": 2,
-          "price": "25.90"
+          "price": "25.90 pln."
         },
         {
           "id": 3,
-          "price": "30.90"
+          "price": "30.90 pln."
         }
       ]
     },
@@ -64,15 +64,15 @@
       "sizes": [
         {
           "id": 1,
-          "price": "19.90"
+          "price": "19.90 pln."
         },
         {
           "id": 2,
-          "price": "25.90"
+          "price": "25.90 pln."
         },
         {
           "id": 3,
-          "price": "30.90"
+          "price": "30.90 pln."
         }
       ]
     },
@@ -83,15 +83,15 @@
       "sizes": [
         {
           "id": 1,
-          "price": "19.90"
+          "price": "19.90 pln."
         },
         {
           "id": 2,
-          "price": "25.90"
+          "price": "25.90 pln."
         },
         {
           "id": 3,
-          "price": "30.90"
+          "price": "30.90 pln."
         }
       ]
     }

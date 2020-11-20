@@ -8,6 +8,7 @@ import ProductList from "./components/productList";
 import { createStore } from 'redux'
 import mainReducer from './reducers';
 import Order from './components/order';
+import ProductTypeSelector from "./components/productTypeSelector";
 
 const store = createStore(mainReducer);
 
@@ -16,8 +17,8 @@ function App() {
   return (
       <ThemeContext>
           <Provider store={store}>
-
             <Order />
+            <ProductTypeSelector />
             <div className="App">
               <Profile />
               <ProductList />
