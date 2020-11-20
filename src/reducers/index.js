@@ -4,10 +4,10 @@ const defaultState = {
     text: 'DEFAULT STRING!!!',
     color: "yellow",
     items: [],
+    price: 0,
 };
 
 export default (store = defaultState, action) => {
-    console.log(action, 'action');
 
     switch(action.type) {
         case "UPDATE_TEXT": {
@@ -15,9 +15,16 @@ export default (store = defaultState, action) => {
         }
 
         case ADD_TO_ORDER: {
-            const res = {...store, items: [...store.items, action.item]};
-            console.log(res.items);
-            return res;
+
+            const items = [...store.items, {title: action.item.title, price: action.price}];
+
+            const price = items.reduce((price, item) => {
+                console.log(item, 'ITEM');
+                return price + item.price
+            }, 0);
+
+            console.log(items, 'ITEMS!!!');
+            return {...store, items, price};
         }
 
         default: {

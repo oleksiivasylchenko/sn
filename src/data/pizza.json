@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Margherita",
+      "description": "sos pomidorowy, ser mazzarella, oregano",
+      "sizes": [
+        {
+          "id": 1,
+          "price": "19.90"
+        },
+        {
+          "id": 2,
+          "price": "25.90"
+        },
+        {
+          "id": 3,
+          "price": "30.90"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Funghi",
+      "description": "sos pomidorowy, ser mazzarella, pieczarki, oregano",
+      "sizes": [
+        {
+          "id": 1,
+          "price": "19.90"
+        },
+        {
+          "id": 2,
+          "price": "25.90"
+        },
+        {
+          "id": 3,
+          "price": "30.90"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Funghi 3",
+      "description": "sos pomidorowy, ser mazzarella, pieczarki, oregano",
+      "sizes": [
+        {
+          "id": 1,
+          "price": "19.90"
+        },
+        {
+          "id": 2,
+          "price": "25.90"
+        },
+        {
+          "id": 3,
+          "price": "30.90"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Funghi 4",
+      "description": "sos pomidorowy, ser mazzarella, pieczarki, oregano",
+      "sizes": [
+        {
+          "id": 1,
+          "price": "19.90"
+        },
+        {
+          "id": 2,
+          "price": "25.90"
+        },
+        {
+          "id": 3,
+          "price": "30.90"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Funghi 5",
+      "description": "sos pomidorowy, ser mazzarella, pieczarki, oregano",
+      "sizes": [
+        {
+          "id": 1,
+          "price": "19.90"
+        },
+        {
+          "id": 2,
+          "price": "25.90"
+        },
+        {
+          "id": 3,
+          "price": "30.90"
+        }
+      ]
+    }
+  ]
+}

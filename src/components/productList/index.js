@@ -1,29 +1,19 @@
 import React from 'react';
 import Product from "./product";
 import storageBinder from "./storageBinder";
-
-const list = [
-    {
-        title: "Маргарита",
-        type: "Pizza",
-        price: [23, 35, 46]
-    },
-    {
-        title: "Морепродукты",
-        type: "Pizza",
-        price: [22, 37, 49]
-    }
-];
+import {items as pizzaList} from '../../data/pizza';
 
 const ProductList = function({addToOrder}) {
 
-    const items = list.map(item => (
-        <Product key={item.title} {...item} addToOrder={() => addToOrder(item)}/>
+    const items = pizzaList.map(item => (
+        <Product key={item.title} {...item} addToOrder={(p) => addToOrder(item, p)}/>
     ));
 
     return (
-        <div>
-            {items}
+        <div className="container">
+            <div className="row">
+                {items}
+            </div>
         </div>
     );
 };

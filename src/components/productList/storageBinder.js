@@ -10,9 +10,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    addToOrder: item => dispatch({
+    addToOrder: (item, price) => dispatch({
         type: ADD_TO_ORDER,
         item,
+        price,
     })
 });
 
