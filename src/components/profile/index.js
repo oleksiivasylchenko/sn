@@ -1,7 +1,8 @@
 import React, {useContext, useState} from 'react';
 import ThemeChanger from "../themeChanger";
 import {ThemeContext} from "../context/theme";
-import reduxBinder from "./reduxBinder";
+import {useSelector, useDispatch} from 'react-redux';
+
 
 const useCounter = () => {
     const [counter, setCounter] = useState(25);
@@ -12,7 +13,16 @@ const useCounter = () => {
     ];
 };
 
-const Profile = ({text, updateText}) => {
+export default () => {
+    const text = useSelector(({text}) => text);
+    const dispatch = useDispatch();
+    const updateText = (text) => {
+        dispatch({
+            type: 'UPDATE_TEXT',
+            text
+        });
+    };
+
     const [counter, setCounter] = useCounter();
 
     const {theme} = useContext(ThemeContext);
@@ -30,5 +40,3 @@ const Profile = ({text, updateText}) => {
         </div>
     );
 };
-
-export default reduxBinder(Profile);

@@ -10,7 +10,12 @@ import mainReducer from './reducers';
 import Order from './components/order';
 import ProductTypeSelector from "./components/productTypeSelector";
 
-const store = createStore(mainReducer);
+const store = createStore(
+    mainReducer,
+
+    // TODO: Remove debug extention on prod
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 function App() {
 
