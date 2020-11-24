@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import ThemeChanger from "../themeChanger";
 import {ThemeContext} from "../context/theme";
 import {useSelector, useDispatch} from 'react-redux';
+import {updateText} from "../../actions";
 
 
 const useCounter = () => {
@@ -16,12 +17,6 @@ const useCounter = () => {
 export default () => {
     const text = useSelector(({text}) => text);
     const dispatch = useDispatch();
-    const updateText = (text) => {
-        dispatch({
-            type: 'UPDATE_TEXT',
-            text
-        });
-    };
 
     const [counter, setCounter] = useCounter();
 
@@ -35,7 +30,7 @@ export default () => {
             <div style={{color: theme.textColor}}>NickName {counter}</div>
             <div onClick={() => {
                 setCounter(counter + 1);
-                updateText(text + "test123");
+                dispatch(updateText(text + "test123"));
             }}>MessageCounter</div>
         </div>
     );

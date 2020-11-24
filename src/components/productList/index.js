@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 
 import Product from "./product";
 
-import {items as pizzaList} from '../../data/pizza';
 import {ADD_TO_ORDER} from "../../reducers/actionTypes";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {loadPizzas} from "../../actions";
 
 const ProductList = function() {
     const dispatch = useDispatch();
@@ -15,9 +15,18 @@ const ProductList = function() {
         price,
     });
 
-    const items = pizzaList.map(item => (
-        <Product key={item.title} {...item} addToOrder={(p) => addToOrder(item, p)}/>
-    ));
+    const pizzaList = useSelector(({pizzas}) => pizzas);
+
+    useEffect(() => {
+        dispatch(loadPizzas());
+    }, []);
+
+    const items = pizzaList.map(item => {
+        console.log(item, 'Item');
+        return (
+            <Product key={item.id} title={item.name} sizes={[]} addToOrder={(p) => addToOrder(item, p)}/>
+        )
+    });
 
     return (
         <div className="container">
