@@ -1,6 +1,7 @@
 import React from 'react';
-import {createStore, applyMiddleware, combineReducers, compose} from 'redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 
 import './App.css';
 import Profile from "./components/profile";
@@ -13,15 +14,23 @@ import ProductList from "./components/productList";
 import mainReducer from './reducers';
 import Order from './components/order';
 import ProductTypeSelector from "./components/productTypeSelector";
+import {sagaWatcher} from "./actions";
+
+const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
     mainReducer,
     compose(
-        applyMiddleware(thunk),
+        applyMiddleware(
+            thunk,
+            sagaMiddleware,
+        ),
         // TODO: Remove debug extention on prod
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 );
+
+sagaMiddleware.run(sagaWatcher);
 
 function App() {
 
