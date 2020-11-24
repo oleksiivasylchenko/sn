@@ -14,7 +14,7 @@ import ProductList from "./components/productList";
 import mainReducer from './reducers';
 import Order from './components/order';
 import ProductTypeSelector from "./components/productTypeSelector";
-import {sagaWatcher} from "./actions";
+import {sagaWatcher} from "./saga/watchers";
 
 const sagaMiddleware = createSagaMiddleware();
 

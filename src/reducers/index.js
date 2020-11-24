@@ -20,12 +20,8 @@ export default (store = defaultState, action) => {
 
             const items = [...store.items, {title: action.item.title, price: action.price}];
 
-            const price = items.reduce((price, item) => {
-                console.log(item, 'ITEM');
-                return price + item.price
-            }, 0);
+            const price = items.reduce((price, item) => price + item.price, 0);
 
-            console.log(items, 'ITEMS!!!');
             return {...store, items, price};
         }
 

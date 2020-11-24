@@ -21,12 +21,9 @@ const ProductList = function() {
         dispatch(loadPizzas());
     }, []);
 
-    const items = pizzaList.map(item => {
-        console.log(item, 'Item');
-        return (
+    const items = pizzaList.map(item => (
             <Product key={item.id} title={item.name} sizes={[]} addToOrder={(p) => addToOrder(item, p)}/>
-        )
-    });
+        ));
 
     return (
         <div className="container">
