@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 
 import './App.css';
 import Profile from "./components/profile";
+import Alert from "./components/alert";
 import ThemeContext from "./components/context/theme";
 import { Provider } from 'react-redux'
 import ProductList from "./components/productList";
@@ -27,6 +28,7 @@ function App() {
   return (
       <ThemeContext>
           <Provider store={store}>
+            <Alert />
             <Order />
             <ProductTypeSelector />
             <div className="App">

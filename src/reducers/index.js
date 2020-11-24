@@ -1,4 +1,4 @@
-import {ADD_TO_ORDER, SET_PIZZAS, UPDATE_TEXT} from "./actionTypes";
+import {ADD_TO_ORDER, HIDE_ALERT, SET_PIZZAS, SHOW_ALERT, UPDATE_TEXT} from "./actionTypes";
 
 const defaultState = {
     text: 'DEFAULT STRING!!!',
@@ -6,6 +6,7 @@ const defaultState = {
     items: [],
     price: 0,
     pizzas: [],
+    alertText: "",
 };
 
 export default (store = defaultState, action) => {
@@ -30,6 +31,14 @@ export default (store = defaultState, action) => {
 
         case SET_PIZZAS: {
             return {...store, pizzas: action.payload}
+        }
+
+        case SHOW_ALERT: {
+            return {...store, alertText: action.payload}
+        }
+
+        case HIDE_ALERT: {
+            return {...store, alertText: ""}
         }
 
         default: {
